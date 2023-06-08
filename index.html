@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <title>Phone Book</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Your Phone Book</h1>
+            <input type="button" value="Create" class="btn" id='createButton'>
+        </header>
+        <hr>
+        <main>
+            <table class='personList' id="personList">
+                <!--TITLES-->
+                <tr>
+                    <td>Name</td>
+                    <td>Phone</td>
+                    <td>Who has</td>
+                    <td>Actions</td>
+                    <td>Actions</td>
+                </tr>
+            </table>
+        </main>
+    </div>
+
+    <div class='containerModal' id='createModal'>
+        <div class='modal'>
+            <h1 class='modalTitle'>Create</h1>
+            <form method="post" action="" id="create_from" name="createForm">
+                <div class='inputBlock'>
+                    <label for="name">Name</label>
+                    <input type="text" class='input' name='name' placeholder="Name" id='nameCreate' required>
+                </div>
+
+                <div class='inputBlock'>
+                    <label for="phone">Phone</label>
+                    <input type="number" class='input' name='phone' placeholder="Phone Number" id='phoneCreate'  required>
+                </div>
+
+                <div class='inputBlock'>
+                    <label for="who">Who is</label>
+                    <input type="text" class='input' name='who' placeholder="Who is" id='whoCreate' required>
+                </div>
+                <div class="btnBlock">
+                    <button class='btn' id="createFormButton" type="submit">Create&Close</button>
+                    <button class='btn' id="closeCreateModal" type="reset">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class='containerModal' id='changeModal'>
+        <div class='modal'>
+            <h1 class='modalTitle'>Change</h1>
+            <form method="post" action="" id="change_from" name="changeForm">
+                <input type="hidden" name="id" id="idChange">
+                <div class='inputBlock'>
+                    <label for="name">Name</label>
+                    <input type="text" class='input' name='name' placeholder="Name" id='nameChange' required>
+                </div>
+
+                <div class='inputBlock'>
+                    <label for="phone">Phone</label>
+                    <input type="number" class='input' name='phone' placeholder="Phone Number" id='phoneChange' required>
+                </div>
+
+                <div class='inputBlock'>
+                    <label for="who">Who is</label>
+                    <input type="text" class='input' name='who' placeholder="Who is" id='whoChange' required>
+                </div>
+                <div class="btnBlock">
+                    <button class='btn' id="ChangeFormButton" type="submit">Change&Close</button>
+                    <button class='btn' id="closeChangeModal" type="reset">Close</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
